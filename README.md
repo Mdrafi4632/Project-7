@@ -2,7 +2,7 @@
 
 Submitted by: **Md Rafi**
 
-This web app: **Soccer Dream Team Builder is a single‑page web app that lets you craft, customize and manage your own roster of players with full Create, Read, Update & Delete functionality—all backed by a real database.**
+This web app: **Soccer Dream Team Builder is a single‑page web app that lets you craft, customize and manage your own roster of players with full Create, Read, Update & Delete functionality all backed by a real database.**
 
 Time spent: **6** hours spent in total
 
