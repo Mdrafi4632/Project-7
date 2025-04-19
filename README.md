@@ -21,7 +21,7 @@ The following **required** functionality is completed:
   - Each crewmate has an edit button that will take users to an update form for the relevant crewmate
   - Users can see the current attributes of their crewmate on the update form
   - After editing the crewmate's attribute values using the form, the user can immediately see those changes reflected in the update form and on the summary page 
-- [C] **A previously created crewmate can be deleted from the crewmate list**
+- [X] **A previously created crewmate can be deleted from the crewmate list**
   - Using the edit form detailed in the previous _crewmates can be updated_ feature, there is a button that allows users to delete that crewmate
   - After deleting a crewmate, the crewmate should no longer be visible in the summary page
   - [X] **Each crewmate has a direct, unique URL link to an info page about them**
