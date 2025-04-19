@@ -1,0 +1,232 @@
+/* src/App.css */
+
+/* 1. Full‐screen grass stripes background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    90deg,
+    #3a6f3a 0,
+    #3a6f3a 80px,
+    #2f5f2f 80px,
+    #2f5f2f 160px
+  );
+}
+
+/* 2. “Pitch” container */
+.App {
+  position: relative;
+  width: 95%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 8px solid #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* 3. Heading with soccer ball */
+.App > h1 {
+  font-size: 2.8rem;
+  color: #225522;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.App > h1::before {
+  content: '⚽️';
+  margin-right: 0.5rem;
+}
+
+/* 4. Tab navigation */
+.tabs {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.tabs button {
+  flex: 1;
+  padding: 0.75rem;
+  background: #fff;
+  color: #225522;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.tabs button:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+.tabs button:hover {
+  background: #225522;
+  color: #fff;
+}
+.tabs button.active {
+  background: #fff;
+  color: #225522;
+}
+
+/* 5. Error banner */
+.error {
+  background: #b00020;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 6. Create form styling */
+.create-form {
+  background: rgba(240, 255, 250, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.create-form h2 {
+  color: #225522;
+  margin-bottom: 1rem;
+}
+.create-form form > div {
+  display: flex;
+  align-items: center;
+  margin: 0.75rem 0;
+}
+.create-form label {
+  flex: 1 0 120px;
+  color: #225522;
+  font-weight: 600;
+}
+.create-form input[type="text"],
+.create-form input[type="number"] {
+  flex: 2;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 7. Position & rating buttons */
+.create-form button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid #225522;
+  background: transparent;
+  color: #225522;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.create-form button:hover,
+.create-form button.selected {
+  background: #225522;
+  color: #fff;
+}
+
+/* 8. Action buttons */
+.create-form .form-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.create-form .btn-submit {
+  padding: 0.6rem 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.create-form .btn-submit:hover {
+  background: #0056b3;
+}
+
+/* 9. Player grid & cards */
+.player-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+.player-card {
+  background: #e8f5e9;
+  border: 2px solid #225522;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.player-card:hover {
+  transform: translateY(-4px);
+}
+.info {
+  padding: 0.75rem;
+  text-align: left;
+}
+.info strong {
+  color: #225522;
+}
+.info p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #334433;
+}
+
+/* in src/App.css, near the form‐actions/or player‐card rules */
+
+.player-card .edit-btn {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background: #225522;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.player-card .edit-btn:hover {
+  background: #183e18;
+}
+
+/* Delete button in the form */
+.create-form .btn-delete {
+  padding: 0.6rem 1rem;
+  background: #b00020;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.create-form .btn-delete:hover {
+  background: #800014;
+}
+
+/* Edit button in summary cards */
+.player-card .edit-btn {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background: #225522;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.player-card .edit-btn:hover {
+  background: #183e18;
+}
